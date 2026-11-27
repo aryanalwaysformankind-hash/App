@@ -1,20 +1,16 @@
-# Quote & Booking Tool
+# Quote & Booking Tool (v2)
 
-A working web app for tradespeople: build a quote in under a minute, send the client a link, and track jobs.
+Open `index.html`, or deploy the folder to Vercel/Netlify (no build step).
 
-## Run it
-Open `index.html` in a browser, or serve the folder: `python3 -m http.server 8000` then visit http://localhost:8000
+## New in v2
+- Home dashboard: quoted this month, win rate, jobs won, deposits collected
+- Follow-up reminders for quotes with no reply after 3 days (one-tap WhatsApp nudge)
+- Saved services: build a quote with one tap
+- Saved clients with auto-filled phone numbers
+- Send by WhatsApp, email or link; client page with Save as PDF/Print
+- Brand colour and business name on every quote
 
-## What works now
-- Sign up, brand name/phone/colour, settings (deposit %, validity, tax, currency)
-- Quote builder with live total and deposit
-- Client link (the quote is encoded in the link) with an Accept button
-- Jobs list with statuses; data is saved in the browser (localStorage)
-
-## What you still need to build (the real business)
-1. **Backend and database** (Supabase or Firebase): real accounts, quotes saved online so the client's Accept reaches you from their phone.
-2. **Stripe Checkout**: create a session for the deposit amount on Accept and mark the job "Deposit paid" via a Stripe webhook. Replace the manual "Mark deposit paid" button.
-3. **Calendar and PDF**: add booked jobs to a calendar and generate a PDF of the quote.
-4. **Logo upload, email/SMS sending, your own domain.**
-
-Tip: give this folder to Claude Code or Lovable and ask it to do steps 1-3 in that order.
+## Still needed for a real business
+1. Backend/database (Supabase) so data syncs across devices and a client's Accept reaches you
+2. Stripe Checkout for the deposit, with a webhook to mark "Deposit paid"
+3. Calendar booking, logo upload, sending emails/SMS from the server
